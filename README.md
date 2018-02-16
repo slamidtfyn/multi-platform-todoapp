@@ -12,10 +12,6 @@ To run the different apps Docker and Docker Compose must be installed on the env
 ## Tests
 Each project must be able to pass the tests defined in ./cypress/integration/todo_app_spec.js
 
-To open the test environment run the following command:
-
-`npm run test:open`
-
 For each project a npm run command is defined to run the tests
 
 ## Projects
