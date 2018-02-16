@@ -19,6 +19,6 @@ For each project a npm run command is defined to run the tests
 ### plain-js
 Simple HTML page with inline js that are able to add/remove todo items
 
-Run app:  `npm run run:plain-js`
-Test app: `npm run test:plain-js`
-Stop app: `npm run stop`
+* Run app:  `npm run run:plain-js`
+* Test app: `npm run test:plain-js`
+* Stop app: `npm run stop`
