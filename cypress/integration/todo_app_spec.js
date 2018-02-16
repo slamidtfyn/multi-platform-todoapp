@@ -12,11 +12,13 @@ describe('todo app test', function () {
             cy.visit(Cypress.env('TODOAPP_URL'));
         });
 
-        it('.should() - assert that <title> is correct', function () {
-
-        cy.title().should('include', 'plain-js');
-        });
-
-
+        it('Has input field with send button', function () {
+            cy.get('#addtodo')
+            .should('have.value', '')
+            .should('have.class', 'mdc-text-field__input')
+            .next()
+            .should('have.class','mdc-text-field__icon')
+            .should('contain','send');
+          });
     });
 });

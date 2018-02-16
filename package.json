@@ -8,13 +8,12 @@
     "cypress": "^2.0.0"
   },
   "scripts": {
-    "test:open": "cypress open",
+    "test:open": "cypress open --env TODOAPP_URL=http://localhost:5000",
 
-    "run:plain-js":"docker-compose up -d plain-js",
+    "pretest:plain-js":"docker-compose up --build -d plain-js",
     "test:plain-js":"cypress run --spec cypress/integration/todo_app_spec.js --env TODOAPP_URL=http://localhost:5000 --headed",
-    
-    
-    "stop":"docker-compose down"
+    "posttest:plain-js":"docker-compose down"
+
   },
   "repository": {
     "type": "git",
