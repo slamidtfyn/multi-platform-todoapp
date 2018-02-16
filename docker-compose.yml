@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  plain-js:
+    build: ./plain-js/
+    ports:
+     - "5000:80"

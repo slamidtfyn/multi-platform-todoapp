@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "TODO app based on different server and clientside technologies",
   "main": "index.js",
-  "dependencies": {
-    "cypress": "^1.4.2"
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^2.0.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:open": "cypress open",
+
+    "run:plain-js":"docker-compose up -d plain-js",
+    "test:plain-js":"cypress run --spec cypress/integration/todo_app_spec.js --env TODOAPP_URL=http://localhost:5000 --headed",
+    
+    
+    "stop":"docker-compose down"
   },
   "repository": {
     "type": "git",
