@@ -10,7 +10,7 @@
   "scripts": {
     "test:open": "cypress open --env TODOAPP_URL=http://localhost:5000",
 
-    "pretest:plain-js":"docker-compose up --build -d plain-js",
+    "pretest:plain-js":"docker-compose down && docker-compose up --build -d plain-js",
     "test:plain-js":"cypress run --spec cypress/integration/todo_app_spec.js --env TODOAPP_URL=http://localhost:5000 --headed",
     "posttest:plain-js":"docker-compose down"
 

@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>TODO App | plain-js</title>
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="mdc-typography">
@@ -16,18 +15,45 @@
         <h1 class="mdc-typography--display1">TODO App - plain-js</h1>
         <div class="mdc-text-field mdc-text-field--box mdc-text-field--with-trailing-icon">
             <input type="text" id="addtodo" class="mdc-text-field__input" data-mdc-auto-init="MDCTextField">
-            <i class="material-icons mdc-text-field__icon" tabindex="0">send</i>
+            <i class="material-icons mdc-text-field__icon" id="btnaddtodo" tabindex="0">send</i>
             <div class="mdc-line-ripple"></div>
         </div>
         <ul class="mdc-list" id="todos">
-                <li class="mdc-list-item">Make coffee</li>
-                <li class="mdc-list-item">Single-line item</li>
+            <li class="mdc-list-item">
+                    <i class="material-icons btnremovetodo">delete</i>
+                    Make coffee</li>
         </ul>
     </main>
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>
-    
+        function removeitem(evt) {
+            document.getElementById('todos').removeChild(evt.target.parentNode);
+        }
+
+        var todos =document.getElementsByClassName('btnremovetodo')
+        for(var i=0;i<todos.length;i++) todos[i].addEventListener('click',removeitem);
+
+        document.getElementById('btnaddtodo').addEventListener('click', function (evt) {
+            evt.preventDefault();
+            let input=document.getElementById('addtodo');
+            let todo = input.value;
+        
+            let removebtn=document.createElement('i');
+            removebtn.classList.add('material-icons')
+            removebtn.classList.add('btnremovetodo');
+            removebtn.addEventListener('click',removeitem);
+            removebtn.appendChild(document.createTextNode('delete'));
+
+            let li = document.createElement('li');
+            li.classList.add('mdc-list-item');
+            li.appendChild(removebtn);
+            li.appendChild(document.createTextNode(todo));
+            
+            document.getElementById('todos').appendChild(li);
+
+            input.value='';
+        });
     </script>
 </body>
 
