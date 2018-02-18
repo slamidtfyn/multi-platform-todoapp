@@ -33,22 +33,24 @@
         function removeitem(evt) {
             $(evt.target.parentNode).remove();
         }
-        
+
         $(function () {
             $('.btnremovetodo').click(removeitem);
-            
+
             $('#btnaddtodo').click(function (evt) {
                 evt.preventDefault();
                 let todo = $('#addtodo').val();
-               
-                let li=$(`<li class="mdc-list-item"><i class="material-icons btnremovetodo">delete</i>${todo}</li>`);
+
+                let li = $(
+                    `<li class="mdc-list-item"><i class="material-icons btnremovetodo">delete</i>${todo}</li>`
+                );
                 li.click(removeitem);
                 $('#todos').append(li);
-                
+
                 input.val('');
             });
         });
-            </script>
+    </script>
 </body>
 
 </html>
