@@ -1,22 +1,38 @@
-# multi-platform-todoapp
-TODO app based on different server and clientside technologies
+# Multi platform TODO app
+This TODO app is based on different server and clientside technologies to show the different ways to implements a webapplication 
 
-The repository consists of different projects that all implements the same todo-app
+Layout of the TODO app is based on the material design components found here: https://material.io/components/
 
+## Run TODO app
 To run the different apps Docker and Docker Compose must be installed on the environment.
 
 * Docker: https://docs.docker.com/install/
 * Docker Compose: https://docs.docker.com/compose/install/
 
-
-## Tests
+## Client side
 Each project must be able to pass the tests defined in ./cypress/integration/todo_app_spec.js
 
 For each project a npm run command is defined to run the tests
-
-## Projects
 
 ### plain-js
 Simple HTML page with inline js that are able to add/remove todo items
 
 Run tests: `npm run test:plain-js`
+### Planned implementations
+* [jQuery](https://jquery.com/)
+* [Handlebars.js](http://handlebarsjs.com/)
+* [Emberjs](https://emberjs.com/)
+* [Angularjs](https://angularjs.org/)
+* [Angular](https://angular.io/)
+* [React](https://reactjs.org/)
+* [Vue.js](https://vuejs.org/)
+* [Aurelia](http://aurelia.io/)
+
+## Server side
+### Planned implementations
+* asp.net core
+* PHP
+* Node.js
+* Python
+* F#
+* Ruby
