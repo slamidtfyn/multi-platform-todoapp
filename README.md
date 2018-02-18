@@ -18,8 +18,13 @@ For each project a npm run command is defined to run the tests
 Simple HTML page with inline js that are able to add/remove todo items
 
 Run tests: `npm run test:plain-js`
+
+### [jQuery](https://jquery.com/)
+plain-js converted into using jQuery instead of the native javascript
+
+
+
 ### Planned implementations
-* [jQuery](https://jquery.com/)
 * [Handlebars.js](http://handlebarsjs.com/)
 * [Emberjs](https://emberjs.com/)
 * [Angularjs](https://angularjs.org/)
