@@ -5,3 +5,8 @@ services:
     build: ./plain-js/
     ports:
      - "5000:80"
+
+  jquery:
+    build: ./jQuery/
+    ports:
+     - "5001:80"     

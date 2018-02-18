@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TODO App | plain-js</title>
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body class="mdc-typography">
+    <main>
+        <h1 class="mdc-typography--display1">TODO App - plain-js</h1>
+        <div class="mdc-text-field mdc-text-field--box mdc-text-field--with-trailing-icon">
+            <input type="text" id="addtodo" class="mdc-text-field__input" data-mdc-auto-init="MDCTextField">
+            <i class="material-icons mdc-text-field__icon" id="btnaddtodo" tabindex="0">send</i>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <ul class="mdc-list" id="todos">
+            <li class="mdc-list-item">
+                <i class="material-icons btnremovetodo">delete</i>
+                Make coffee</li>
+        </ul>
+    </main>
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        function removeitem(evt) {
+            $(evt.target.parentNode).remove();
+        }
+
+        $(function () {
+            $('.btnremovetodo').click(removeitem);
+
+            $('#btnaddtodo').click(function (evt) {
+                evt.preventDefault();
+                let todo = $('#addtodo').val();
+
+                let li = $(
+                    `<li class="mdc-list-item"><i class="material-icons btnremovetodo">delete</i>${todo}</li>`
+                );
+                li.click(removeitem);
+                $('#todos').append(li);
+
+                input.val('');
+            });
+        });
+    </script>
+</body>
+
+</html>
