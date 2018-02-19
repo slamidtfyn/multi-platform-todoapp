@@ -22,7 +22,7 @@ Each project must be able to pass the tests defined in ./cypress/integration/tod
 
 For each project a npm run command is defined to run the tests
 
-### plain-js
+### Plain javascipt
 Simple HTML page with inline js that are able to add/remove todo items
 
 Run tests: `npm run test:plain-js`
