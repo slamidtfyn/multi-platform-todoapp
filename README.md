@@ -9,6 +9,14 @@ To run the different apps Docker and Docker Compose must be installed on the env
 * Docker: https://docs.docker.com/install/
 * Docker Compose: https://docs.docker.com/compose/install/
 
+Download the source with
+
+`git clone https://github.com/slamidtfyn/multi-platform-todoapp.git`
+
+Load npm packages with
+
+`npm install`
+
 ## Client side
 Each project must be able to pass the tests defined in ./cypress/integration/todo_app_spec.js
 
@@ -22,6 +30,7 @@ Run tests: `npm run test:plain-js`
 ### [jQuery](https://jquery.com/)
 plain-js converted into using jQuery instead of the native javascript
 
+Run tests: `npm run test:jQuery`
 
 
 ### Planned implementations
